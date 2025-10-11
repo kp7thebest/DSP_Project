@@ -32,3 +32,16 @@ STFT domain: they predict a real-valued mask `M_j` for each source and reconstru
 - Loudness set in LUFS following film/broadcast practice: speech loudest, then foreground SFX,
   music, and background SFX
 - 3,406 train / 487 validation / 973 test mixtures
+
+## MRX: Multi-Resolution CrossNet
+
+MRX extends CrossNet-Open-Unmix (X-UMX) with several STFT resolutions (32, 64 and 256 ms
+windows that share one hop size):
+
+1. Compute the STFT of the mixture at each resolution and project each magnitude spectrogram to 512 dims.
+2. Average across resolutions, run three BLSTM stacks, and average their outputs.
+3. Decode one mask per source per resolution (3 sources × 3 resolutions = 9 masks).
+4. Apply each mask to its own spectrogram, take the iSTFT, and sum the results across resolutions.
+
+Short windows capture transients like consonants and impacts. Long windows resolve harmonics
+in music and ambience.
