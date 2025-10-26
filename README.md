@@ -45,3 +45,20 @@ windows that share one hop size):
 
 Short windows capture transients like consonants and impacts. Long windows resolve harmonics
 in music and ambience.
+
+## Running the pretrained model
+
+We used MERL's official implementation,
+[merlresearch/cocktail-fork-separation](https://github.com/merlresearch/cocktail-fork-separation),
+which ships pretrained MRX checkpoints through git LFS:
+
+```bash
+git lfs install
+git clone https://github.com/merlresearch/cocktail-fork-separation.git
+cd cocktail-fork-separation
+pip install -r requirements.txt
+python separate.py --audio-path ../DSP_Project/audio/custom_mix/mixture.wav --out-dir out/custom_mix
+```
+
+This writes `speech.wav`, `music.wav` and `sfx.wav` to the output directory. The input
+should be sampled at 44.1 kHz.
