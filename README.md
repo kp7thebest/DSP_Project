@@ -62,3 +62,22 @@ python separate.py --audio-path ../DSP_Project/audio/custom_mix/mixture.wav --ou
 
 This writes `speech.wav`, `music.wav` and `sfx.wav` to the output directory. The input
 should be sampled at 44.1 kHz.
+
+## Reported results
+
+SI-SDR (dB) at 44.1 kHz, from Table 2 of the paper:
+
+| Model         | Music   | Speech   | SFX     |
+|---------------|---------|----------|---------|
+| No processing | −6.8    | 1.0      | −5.0    |
+| Conv-TasNet   | 0.3     | 8.5      | 2.0     |
+| UMX (64 ms)   | 3.1     | 11.7     | 4.4     |
+| XUMX (64 ms)  | 3.5     | 11.7     | 5.1     |
+| **MRX**       | **4.2** | **12.3** | **5.7** |
+
+## Reference
+
+D. Petermann, G. Wichern, Z.-Q. Wang, and J. Le Roux, "The Cocktail Fork Problem: Three-Stem
+Audio Separation for Real-World Soundtracks," *Proc. ICASSP*, 2022.
+[doi:10.1109/ICASSP43922.2022.9746005](https://doi.org/10.1109/ICASSP43922.2022.9746005) ·
+[project page](https://cocktail-fork.github.io)
