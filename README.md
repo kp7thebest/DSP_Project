@@ -84,6 +84,10 @@ Ableton Live following the DnR mixing rules:
 - loudness-matched, with speech sitting highest in the mix
 - staggered clips with partial overlap across classes and none within a class
 
+
+The three stems in `audio/custom_mix/stems/` sum exactly to the mixture, so they can be used
+as ground truth when scoring the separated outputs.
+
 ## Reference
 
 D. Petermann, G. Wichern, Z.-Q. Wang, and J. Le Roux, "The Cocktail Fork Problem: Three-Stem
