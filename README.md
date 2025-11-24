@@ -75,6 +75,15 @@ SI-SDR (dB) at 44.1 kHz, from Table 2 of the paper:
 | XUMX (64 ms)  | 3.5     | 11.7     | 5.1     |
 | **MRX**       | **4.2** | **12.3** | **5.7** |
 
+## Custom test mixture
+
+`audio/custom_mix/mixture.wav` is a ~56 s soundtrack (44.1 kHz, stereo) that we built in
+Ableton Live following the DnR mixing rules:
+
+- clean, isolated speech, music and SFX sources
+- loudness-matched, with speech sitting highest in the mix
+- staggered clips with partial overlap across classes and none within a class
+
 ## Reference
 
 D. Petermann, G. Wichern, Z.-Q. Wang, and J. Le Roux, "The Cocktail Fork Problem: Three-Stem
