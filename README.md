@@ -7,6 +7,8 @@ CrossNet (MRX) model on a test mix we built ourselves using the Divide and Remas
 
 **Authors:** Ishan Dhingra, Karthik Periasamy
 
+**Report:** [DSP_Project_Report.pdf](report/DSP_Project_Report.pdf)
+
 _Work in progress._
 
 ## Background
@@ -87,6 +89,19 @@ Ableton Live following the DnR mixing rules:
 
 The three stems in `audio/custom_mix/stems/` sum exactly to the mixture, so they can be used
 as ground truth when scoring the separated outputs.
+
+## Findings
+
+- **Speech:** clean and intelligible, even where all three sources overlap.
+- **Music:** harmonic and melodic structure preserved. Faint speech harmonics occasionally
+  leak through in dense overlaps.
+- **SFX:** the hardest class. Ambient sounds separate well, but sharp transients that coincide
+  with musical onsets are sometimes smoothed.
+- **Silence:** very little energy leaks into silent regions, consistent with the low Predicted
+  Energy at Silence (PES) reported in the paper.
+
+Results on our mix followed the trends reported in the paper. See the
+[report](report/DSP_Project_Report.pdf) for the full discussion.
 
 ## Reference
 
