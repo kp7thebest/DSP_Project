@@ -9,8 +9,6 @@ CrossNet (MRX) model on a test mix we built ourselves using the Divide and Remas
 
 **Report:** [DSP_Project_Report.pdf](report/DSP_Project_Report.pdf)
 
-_Work in progress._
-
 ## Background
 
 ### The problem
@@ -102,6 +100,17 @@ as ground truth when scoring the separated outputs.
 
 Results on our mix followed the trends reported in the paper. See the
 [report](report/DSP_Project_Report.pdf) for the full discussion.
+
+## Repository layout
+
+```
+report/DSP_Project_Report.pdf   final project report
+audio/custom_mix/mixture.wav    DnR-style test mixture (Ableton)
+audio/custom_mix/stems/         ground-truth speech / music / sfx stems
+```
+
+We also tested on real-world film and anime soundtrack clips. Those clips are copyrighted, so
+they are not included here.
 
 ## Reference
 
